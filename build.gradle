@@ -13,20 +13,6 @@ java.toolchain.languageVersion = JavaLanguageVersion.of(21)
 
 minecraft {
     mappings channel: mapping_channel, version: mapping_version
-    runs {
-        configureEach {
-            workingDirectory project.file('run')
-            mods {
-                "${mod_id}" {
-                    source sourceSets.main
-                }
-            }
-        }
-        client {}
-        server {
-            args '--nogui'
-        }
-    }
 }
 
 dependencies {
